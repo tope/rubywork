@@ -1,0 +1,26 @@
+<h1><%=h @recipe.title %></h1>
+<p><%=h @recipe.summary %></p>
+
+<h2>Ingredients:</h2>
+<p><%=h @recipe.ingredients %></p>
+
+<h2>Instructions:</h2>
+<p><%=h @recipe.instructions %></p>
+
+<p><em>Cooking time is around <%=h @recipe.cooking_time %> mins</em></p>
+
+<div id="comments">
+    <h2>Displaying <%=pluralize(@recipe.comments.size, 'comment')%></h2>
+    <%= link_to 'New comment', :controller => 'comments', :action => 'new', :recipe_id => @recipe %>
+       <% @recipe.comments.each do |comment| %>
+           <div>
+                <p><%= comment.body %></p>    
+                posted <%= time_ago_in_words(comment.created_at)  %> ago
+            </div>
+       <%end %>
+</div>
+
+<br/>
+<%= link_to 'Edit', :controller => 'recipes', :action => 'edit', :id => @recipe %> |
+<%= link_to 'Back', :controller => 'recipes' %>
+

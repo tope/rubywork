@@ -1,0 +1,33 @@
+
+development:
+    key: 03381549031af82985126aad1af78546
+    secret: 53c807b27041fd45bd9c1e98b7821f81
+    canvas_path: /jobboardtope/
+    callback_path: /search/
+    tunnel:
+      username: yourLoginName
+      host: http://localhost:3000
+      port: 1234
+      local_port: 5678
+
+test:
+    key: YOUR_API_KEY_HERE
+    secret: YOUR_API_SECRET_HERE
+    canvas_path: /yourAppName/
+    callback_path: /path/to/your/callback/
+    tunnel:
+      username: yourLoginName
+      host: www.yourexternaldomain.com
+      port: 1234
+      local_port: 5678
+
+production:
+    key: YOUR_API_KEY_HERE
+    secret: YOUR_API_SECRET_HERE
+    canvas_path: /yourAppName/
+    callback_path: /path/to/your/callback/
+    tunnel:
+      username: yourLoginName
+      host: www.yourexternaldomain.com
+      port: 1234
+      local_port: 5678

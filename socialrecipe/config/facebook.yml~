@@ -1,0 +1,33 @@
+
+development:
+    key: f833fc469961979505d82062a8f88f7a
+    secret: a76504b15b3e5394b0565ee853ff2cc9
+    canvas_path: /recipesocialtope/
+    callback_path: /path/to/your/callback/
+    tunnel:
+      username: yourLoginName
+      host: www.yourexternaldomain.com
+      port: 1234
+      local_port: 5678
+
+test:
+    key: YOUR_API_KEY_HERE
+    secret: YOUR_API_SECRET_HERE
+    canvas_path: /yourAppName/
+    callback_path: /path/to/your/callback/
+    tunnel:
+      username: yourLoginName
+      host: www.yourexternaldomain.com
+      port: 1234
+      local_port: 5678
+
+production:
+    key: YOUR_API_KEY_HERE
+    secret: YOUR_API_SECRET_HERE
+    canvas_path: /yourAppName/
+    callback_path: /path/to/your/callback/
+    tunnel:
+      username: yourLoginName
+      host: www.yourexternaldomain.com
+      port: 1234
+      local_port: 5678

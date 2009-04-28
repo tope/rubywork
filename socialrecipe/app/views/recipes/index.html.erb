@@ -1,0 +1,12 @@
+<h2><%= @title %></h2>
+
+<%@recipes.each do |recipe|%>
+<div>
+<h3><%= link_to h(recipe.title), :controller => 'recipes', :action => 'show', :id => recipe%></h3>
+<p><%=h recipe.summary %></p>
+</div>
+<%end%>
+
+<br/>
+<%= link_to 'New recipe', :controller => 'recipes', :action => 'new' %>
+

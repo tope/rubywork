@@ -1,0 +1,3 @@
+
+Query for: <%= @yourquery %> <br>
+Found: <%= @result.estimatedTotalResultsCount %><br>

@@ -1,0 +1,26 @@
+<h1>Editing recipe</h1>
+
+<%= error_messages_for :recipe %>
+
+<% form_for(:recipe, 
+      :url => {:controller =>'recipes', :action => 'update', :id => @recipe}) do |f| %>
+<dl>
+    <dt><label for="recipe_title">Title:</label></dt>
+    <dd><%= f.text_field :title %></dd>
+    <dt><label for="recipe_summary">Summary:</label></dt>
+    <dd><%= f.text_area :summary %></dd>
+    <dt><label for="recipe_ingredients">Ingredients:</label></dt>
+    <dd><%= f.text_area :ingredients %></dd>
+    <dt><label for="recipe_instructions">Cooking Instructions:</label></dt>
+    <dd><%= f.text_area :instructions %></dd>
+    <dt><label for="recipe_cooking_time">Cooking Time:</label></dt>
+    <dd><%= f.text_field :cooking_time %> mins</dd>
+    <dt></dt>
+    <dd><%= submit_tag "Update" %></dd>
+</dl>
+<% end %>
+
+<br/>
+<%= link_to 'Show', :controller => 'recipes', :action => 'show', :id =>@recipe %> |
+<%= link_to 'Back', :controller => 'recipes' %>
+

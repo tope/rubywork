@@ -1,0 +1,40 @@
+
+<h1>
+Job Board
+</h1>
+<p>Select to include your education and work history.</p>
+<% form_tag :action => "search" do %>
+<label>
+Education history &nbsp;<%= check_box_tag 'education'%>
+</label>
+<ul>
+<%
+education = []
+	%>
+</ul>
+<%= hidden_field_tag 'education_info', education.join(", ") %>
+<label>Work history &nbsp; <%= check_box_tag 'work'%></label>
+<ul>
+<%
+work = []
+@work_history.work_info_list.each { |work_info|
+work << work_info.position
+%>
+<li><%= h work_info.company_name %> (<%= h work_info.start_date%>
+- <%= work_info.end_date%>) - <%= h work_info.position%>
+</li>
+<% } %>
+</ul>
+<%= hidden_field_tag 'work_info', work.join(", ") %>
+<label>Other keywords</label>
+<p>Enter additional keywords to search jobs on (separate keywords with commas) </p>
+<%= text_field_tag 'keywords'%>
+<br/>
+<label>Job location</label>
+<p>Where should the jobs be located?</p>
+<% locations = []
+locations << @current_location.city << @current_location.country %>
+<%= text_field_tag 'location', locations.compact.delete_if {|item| item == '' }. join(', ')%>
+<p/>
+<%= submit_tag "search" %>
+<% end %>

@@ -1,0 +1,39 @@
+
+# I might need to change:
+ 
+#callback_path: http://localhost:3000/razzdazz/ to
+
+#callback_path: /razzdazz/
+
+development:
+    key: a7a0f19bae1a39e93ad2c7537f1886d7
+    secret: 909d9fd9a3d603fd5b28deac8704417e
+    canvas_path: /razzdazz/
+    callback_path: 
+    tunnel:
+      username: 
+      host: localhost
+      port: 3000
+      local_port: 
+
+test:
+    key: YOUR_API_KEY_HERE
+    secret: YOUR_API_SECRET_HERE
+    canvas_path: /yourAppName/
+    callback_path: /path/to/your/callback/
+    tunnel:
+      username: yourLoginName
+      host: www.yourexternaldomain.com
+      port: 1234
+      local_port: 5678
+
+production:
+    key: YOUR_API_KEY_HERE
+    secret: YOUR_API_SECRET_HERE
+    canvas_path: /yourAppName/
+    callback_path: /path/to/your/callback/
+    tunnel:
+      username: yourLoginName
+      host: www.yourexternaldomain.com
+      port: 1234
+      local_port: 5678

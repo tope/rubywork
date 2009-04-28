@@ -1,0 +1,39 @@
+** RFACEBOOK INFO: It looks like you used a full URL 'http://localhost:3000/razzdazz/' in facebook.yml.  RFacebook expected a relative path and has automatically converted this URL to '/razzdazz/'.
+** RFACEBOOK INFO: It looks like you used a full URL 'http://localhost:3000/razzdazz/' in facebook.yml.  RFacebook expected a relative path and has automatically converted this URL to '/razzdazz/'.
+** RFACEBOOK INFO: It looks like you used a full URL 'http://localhost:3000/razzdazz/' in facebook.yml.  RFacebook expected a relative path and has automatically converted this URL to '/razzdazz/'.
+** RFACEBOOK INFO: It looks like you used a full URL 'http://localhost:3000/razzdazz/' in facebook.yml.  RFacebook expected a relative path and has automatically converted this URL to '/razzdazz/'.
+** RFACEBOOK INFO: It looks like you used a full URL 'http://localhost:3000/razzdazz/' in facebook.yml.  RFacebook expected a relative path and has automatically converted this URL to '/razzdazz/'.
+** RFACEBOOK INFO: It looks like you used a full URL 'http://localhost:3000/razzdazz/' in facebook.yml.  RFacebook expected a relative path and has automatically converted this URL to '/razzdazz/'.
+DEPRECATION WARNING: ActionController::AbstractRequest.relative_url_root= has been renamed.You can now set it with config.action_controller.relative_url_root=. (called from /home/too20/razzdazz/config/routes.rb:49)
+  [4;36;1mSQL (138.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (37.7ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (80.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (228.9ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (77.0ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (5.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (3.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateNotes (20090420174046)
+  [4;35;1mSQL (21.4ms)[0m   [0mCREATE TABLE `notes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `body` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (94.5ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090420174046')[0m
+Migrating to CreateComments (20090420174058)
+  [4;35;1mSQL (23.9ms)[0m   [0mCREATE TABLE `comments` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `note_id` int(11), `body` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090420174058')[0m
+Migrating to AddFbUserIds (20090420174349)
+  [4;35;1mSQL (29.8ms)[0m   [0mALTER TABLE `notes` ADD `fb_user_id` int(11)[0m
+  [4;36;1mSQL (34.5ms)[0m   [0;1mALTER TABLE `comments` ADD `fb_user_id` int(11)[0m
+  [4;35;1mSQL (29.9ms)[0m   [0malter table notes modify fb_user_id bigint[0m
+  [4;36;1mSQL (24.7ms)[0m   [0;1malter table comments modify fb_user_id bigint[0m
+  [4;35;1mSQL (24.6ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090420174349')[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (2.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (45.8ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (2.9ms)[0m   [0;1mdescribe `comments`[0m
+  [4;35;1mSQL (2.2ms)[0m   [0mSHOW KEYS FROM `comments`[0m
+  [4;36;1mSQL (3.6ms)[0m   [0;1mSHOW FIELDS FROM `notes`[0m
+  [4;35;1mSQL (2.5ms)[0m   [0mdescribe `notes`[0m
+  [4;36;1mSQL (2.6ms)[0m   [0;1mSHOW KEYS FROM `notes`[0m
+** RFACEBOOK INFO: It looks like you used a full URL 'http://localhost:3000/razzdazz/' in facebook.yml.  RFacebook expected a relative path and has automatically converted this URL to '/razzdazz/'.
+DEPRECATION WARNING: ActionController::AbstractRequest.relative_url_root= has been renamed.You can now set it with config.action_controller.relative_url_root=. (called from /home/too20/razzdazz/config/routes.rb:49)
+DEPRECATION WARNING: ActionController::AbstractRequest.relative_url_root= has been renamed.You can now set it with config.action_controller.relative_url_root=. (called from /home/too20/razzdazz/config/routes.rb:49)
+DEPRECATION WARNING: ActionController::AbstractRequest.relative_url_root= has been renamed.You can now set it with config.action_controller.relative_url_root=. (called from /home/too20/razzdazz/config/routes.rb:49)

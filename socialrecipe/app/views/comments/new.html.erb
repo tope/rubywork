@@ -1,0 +1,15 @@
+<h1>New comment</h1>
+
+<%= error_messages_for :comment %>
+
+<% form_for(:comment, :url => 
+      {:controller => 'comments', :action => 'create'}) do |f| %>
+<dl>
+    <dt><label for="comment_body">Body Content:</label></dt>
+    <dd><%= f.text_area :body %></dd>
+    <dt></dt>
+    <dd><%= submit_tag "Create" %></dd>
+</dl>
+    <%= f.hidden_field :recipe_id, :value => @comment.recipe_id %>
+<% end %>
+

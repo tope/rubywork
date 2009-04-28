@@ -1,0 +1,11 @@
+
+Query for: <%= @yourquery %> <br>
+Found: <%= @result.estimatedTotalResultsCount %><br>
+Query took about <%= @result.searchTime %> seconds <br>
+  <% @result.resultElements.each do |rec| %>
+    <b> Title: </b> <%= rec["title"] %> <br>
+    <b> Summary: </b> <%= rec.snippet %> <br>
+    <b> Link: </b> <a href="<%= rec["URL"] %>"><%= rec["URL"] %> </a>
+    <br> <br>
+
+<% end %>
